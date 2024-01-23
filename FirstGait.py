@@ -5,8 +5,6 @@ from adafruit_servokit import ServoKit
 kit=ServoKit(channels=16)
 delay = 0.4
 
-
-
 kit.servo[0].set_pulse_width_range(500,2500)
 kit.servo[1].set_pulse_width_range(500,2500)
 kit.servo[2].set_pulse_width_range(500,2500)
@@ -76,15 +74,8 @@ def getInverse(x1,y1,z):
     return th1,th02,th03;
 
 
-if __name__ == "__main__":
-
-    
-    
-
- 
-           
-    
-              #initialize
+if __name__ == "__main__":   
+     #initialize
      TH1,TH02,TH03=getInverse(9.404,9.40,-16.2)
      kit.servo[0].angle=TH1+100                                          
      kit.servo[1].angle=TH02+100
@@ -107,7 +98,6 @@ if __name__ == "__main__":
      time.sleep(2)
      while(1): 
           # first leg
-        
          TH1,TH02,TH03=getInverse(9.404,14.40,-12.2)
          kit.servo[0].angle=TH1+100                                          
          kit.servo[1].angle=TH02+100
@@ -188,7 +178,7 @@ if __name__ == "__main__":
          kit.servo[2].angle=TH03+100
          time.sleep(delay)
          
-         #pushgfhhgjgjughjghjghjgh
+         #push
          
                # leg 1   
          TH1,TH02,TH03=getInverse(9.404,9.40,-16.2)
@@ -196,8 +186,6 @@ if __name__ == "__main__":
          kit.servo[1].angle=TH02+100
          kit.servo[2].angle=TH03+100
              
-         
-         
          #leg 2
          TH1,TH02,TH03=getInverse(9.404,-2.40,-16.2)
          print("case 123")
@@ -221,9 +209,6 @@ if __name__ == "__main__":
          
          #leg 4
          TH1,TH02,TH03=getInverse(5.404,5.40,-16.2)
-         
-         
-         
          kit.servo[12].angle=TH1+90                                          
          kit.servo[13].angle=TH02+90
          kit.servo[14].angle=TH03+140
@@ -253,10 +238,7 @@ if __name__ == "__main__":
          kit.servo[9].angle=TH02+90
          kit.servo[10].angle=TH03+90
          
-         
-         
-          
-                        # leg 1   correction
+          # leg 1   correction
          TH1,TH02,TH03=getInverse(10.404,10.409,-14.2)
          print("case 1")
          print(TH1+100)
